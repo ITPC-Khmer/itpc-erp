@@ -1,0 +1,24 @@
+=============================================
+Next I created a HelperServiceProvider.php by running the artisan command:
+
+php artisan make:provider HelperServiceProvider
+
+Within the register method I added this snippet
+
+public function register()
+{
+    foreach (glob(app_path().'/Helpers/*.php') as $filename){
+        require_once($filename);
+    }
+}
+lastly register the service provider in your config/app.php in the providers array
+
+'providers' => [
+    'App\Providers\HelperServiceProvider',
+]
+now any file in your Helpers directory is loaded, and ready for use.
+
+composer dumpautoload
+
+=============================================
+
