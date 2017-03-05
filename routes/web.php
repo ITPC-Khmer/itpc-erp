@@ -11,7 +11,7 @@ foreach (G::UrlList() as $group => $routes){
             {
                 if($route['m'] == 'get'){
                     Route::get($route['u'],function () use ($route){
-                        dd(DB::table('items')->get());
+                        dd(DB::table('migrations')->get());
                         return $route;
                     });
                 }elseif($route['m'] == 'post'){
