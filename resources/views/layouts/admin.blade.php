@@ -33,6 +33,9 @@
         <!-- END THEME LAYOUT STYLES -->
     @show
     <link rel="shortcut icon" href="favicon.ico" />
+    <script>
+        var CSRF_TOKEN = '{{ csrf_token() }}';
+    </script>
 </head>
 <!-- END HEAD -->
 
@@ -694,6 +697,23 @@
 <script src="{{ $base_url }}assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
 <script src="{{ $base_url }}assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
+<script>
+    $.ajaxSetup({
+        data: {
+            isAjax: true,
+            _token: CSRF_TOKEN
+        },
+        beforeSend: function (jqXHR, settings) {
+
+        },
+        complete: function () {
+        },
+        success: function () {
+        },
+        error: function () {
+        }
+    });
+</script>
 <!-- BEGIN THEME GLOBAL SCRIPTS -->
 <script src="{{ $base_url }}assets/global/scripts/app.min.js" type="text/javascript"></script>
 <!-- END THEME GLOBAL SCRIPTS -->

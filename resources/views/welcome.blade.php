@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title','Home')
+@section('title',_t('Home'))
 
 @section('content')
 
@@ -11,7 +11,7 @@
                 <div class="portlet-title">
                     <div class="caption font-green-haze">
                         <i class="icon-settings font-green-haze"></i>
-                        <span class="caption-subject bold uppercase"> Form Layouts</span>
+                        <span class="caption-subject bold uppercase"> {{ _t('Form User') }}</span>
                     </div>
                     <div class="actions">
                         <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:"
@@ -60,7 +60,7 @@
                         </div>
                     </form>
 
-
+                    {!! highlight('abcd','bc') !!}
                 </div>
             </div>
         </div>
