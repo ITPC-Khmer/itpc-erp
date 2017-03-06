@@ -13347,6 +13347,9 @@ namespace {
             return \Illuminate\Database\Query\Builder::macroCall($method, $parameters);
         }
         }
-    
+
+    class G extends App\Helpers\GlobalHelper
+    {
+    }
 }
 

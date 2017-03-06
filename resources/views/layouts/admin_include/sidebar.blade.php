@@ -26,13 +26,13 @@
                 <!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
                 <!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
                 <form class="sidebar-search  " action="page_general_search_3.html" method="POST">
-                    <a href="javascript:;" class="remove">
+                    <a href="javascript:" class="remove">
                         <i class="icon-close"></i>
                     </a>
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search...">
                         <span class="input-group-btn">
-                                            <a href="javascript:;" class="btn submit">
+                                            <a href="javascript:" class="btn submit">
                                                 <i class="icon-magnifier"></i>
                                             </a>
                                         </span>
@@ -41,18 +41,18 @@
                 <!-- END RESPONSIVE QUICK SEARCH FORM -->
             </li>
 
-            @foreach(G::UrlList() as $group => $routes)
+            @foreach(G::urlList() as $group => $routes)
             <li class="nav-item {{ $loop->first?'active':'' }}">
-                <a href="javascript:;" class="nav-link nav-toggle">
+                <a href="javascript:" class="nav-link nav-toggle">
                     <i class="icon-folder"></i>
                     <span class="title">{{ $group }}</span>
                     <span class="arrow {{ $loop->first?'open':'' }}"></span>
                 </a>
                 <ul class="sub-menu">
                     {{--$collection = collect(['name', 'age']);--}}
-                    @foreach(G::$UrlListType as $t => $txt)
+                    @foreach(G::$urlListType as $t => $txt)
                     <li class="nav-item {{ $loop->first?'active':'' }} open">
-                        <a href="javascript:;" class="nav-link nav-toggle">
+                        <a href="javascript:" class="nav-link nav-toggle">
                             <i class="icon-settings"></i> {{ $txt }}
                             <span class="arrow open"></span>
                         </a>

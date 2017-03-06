@@ -3,7 +3,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-foreach (G::UrlList() as $group => $routes){
+foreach (G::urlList() as $group => $routes) {
     Route::group(['prefix' => strtolower($group),'namespace' => $group],
         function() use ($routes) {
 
