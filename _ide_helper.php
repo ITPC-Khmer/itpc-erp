@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.4.15 on 2017-03-07.
+ * Generated for Laravel 5.4.15 on 2017-03-08.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -3169,7 +3169,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param \Closure $callback
          * @param int $attempts
-         * @return mixed
+         * @return mixed 
          * @throws \Exception|\Throwable
          * @static 
          */
@@ -3218,7 +3218,7 @@ namespace Illuminate\Support\Facades {
          * Get a schema builder instance for the connection.
          *
          * @return \Illuminate\Database\Schema\Builder
-         * @static
+         * @static 
          */
         public static function getSchemaBuilder()
         {
@@ -3412,7 +3412,7 @@ namespace Illuminate\Support\Facades {
          * @param \PDOStatement $statement
          * @param array $bindings
          * @return void
-         * @static
+         * @static 
          */
         public static function bindValues($statement, $bindings)
         {
@@ -8949,7 +8949,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $table
          * @return bool
-         * @static
+         * @static 
          */
         public static function hasTable($table)
         {
@@ -9000,7 +9000,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $table
          * @return array
-         * @static
+         * @static 
          */
         public static function getColumnListing($table)
         {
@@ -11337,13 +11337,13 @@ namespace Collective\Html {
 
     class FormFacade
     {
-
+        
         /**
          * Open up a new HTML form.
          *
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function open($options = array())
         {
@@ -11356,7 +11356,7 @@ namespace Collective\Html {
          * @param mixed $model
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function model($model, $options = array())
         {
@@ -11368,7 +11368,7 @@ namespace Collective\Html {
          *
          * @param mixed $model
          * @return void
-         * @static
+         * @static 
          */
         public static function setModel($model)
         {
@@ -11379,7 +11379,7 @@ namespace Collective\Html {
          * Close the current form.
          *
          * @return string
-         * @static
+         * @static 
          */
         public static function close()
         {
@@ -11390,7 +11390,7 @@ namespace Collective\Html {
          * Generate a hidden field with the current CSRF token.
          *
          * @return string
-         * @static
+         * @static 
          */
         public static function token()
         {
@@ -11405,7 +11405,7 @@ namespace Collective\Html {
          * @param array $options
          * @param bool $escape_html
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function label($name, $value = null, $options = array(), $escape_html = true)
         {
@@ -11420,7 +11420,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function input($type, $name, $value = null, $options = array())
         {
@@ -11434,7 +11434,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function text($name, $value = null, $options = array())
         {
@@ -11447,7 +11447,7 @@ namespace Collective\Html {
          * @param string $name
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function password($name, $options = array())
         {
@@ -11461,7 +11461,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function hidden($name, $value = null, $options = array())
         {
@@ -11475,7 +11475,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function email($name, $value = null, $options = array())
         {
@@ -11489,7 +11489,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function tel($name, $value = null, $options = array())
         {
@@ -11503,7 +11503,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function number($name, $value = null, $options = array())
         {
@@ -11517,7 +11517,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function date($name, $value = null, $options = array())
         {
@@ -11531,7 +11531,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function datetime($name, $value = null, $options = array())
         {
@@ -11545,7 +11545,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function datetimeLocal($name, $value = null, $options = array())
         {
@@ -11559,7 +11559,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function time($name, $value = null, $options = array())
         {
@@ -11573,7 +11573,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function url($name, $value = null, $options = array())
         {
@@ -11586,7 +11586,7 @@ namespace Collective\Html {
          * @param string $name
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function file($name, $options = array())
         {
@@ -11600,7 +11600,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function textarea($name, $value = null, $options = array())
         {
@@ -11615,7 +11615,7 @@ namespace Collective\Html {
          * @param string $selected
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function select($name, $list = array(), $selected = null, $options = array())
         {
@@ -11631,7 +11631,7 @@ namespace Collective\Html {
          * @param string $selected
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function selectRange($name, $begin, $end, $selected = null, $options = array())
         {
@@ -11647,7 +11647,7 @@ namespace Collective\Html {
          * @param string $selected
          * @param array $options
          * @return mixed
-         * @static
+         * @static 
          */
         public static function selectYear()
         {
@@ -11662,7 +11662,7 @@ namespace Collective\Html {
          * @param array $options
          * @param string $format
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function selectMonth($name, $selected = null, $options = array(), $format = '%B')
         {
@@ -11676,7 +11676,7 @@ namespace Collective\Html {
          * @param string $value
          * @param string $selected
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function getSelectOption($display, $value, $selected)
         {
@@ -11691,7 +11691,7 @@ namespace Collective\Html {
          * @param bool $checked
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function checkbox($name, $value = 1, $checked = null, $options = array())
         {
@@ -11706,7 +11706,7 @@ namespace Collective\Html {
          * @param bool $checked
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function radio($name, $value = null, $checked = null, $options = array())
         {
@@ -11719,7 +11719,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function reset($value, $attributes = array())
         {
@@ -11733,7 +11733,7 @@ namespace Collective\Html {
          * @param string $name
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function image($url, $name = null, $attributes = array())
         {
@@ -11747,7 +11747,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function color($name, $value = null, $options = array())
         {
@@ -11760,7 +11760,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function submit($value = null, $options = array())
         {
@@ -11773,7 +11773,7 @@ namespace Collective\Html {
          * @param string $value
          * @param array $options
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function button($value = null, $options = array())
         {
@@ -11786,7 +11786,7 @@ namespace Collective\Html {
          * @param string $name
          * @param array $attributes
          * @return string
-         * @static
+         * @static 
          */
         public static function getIdAttribute($name, $attributes)
         {
@@ -11799,7 +11799,7 @@ namespace Collective\Html {
          * @param string $name
          * @param string $value
          * @return mixed
-         * @static
+         * @static 
          */
         public static function getValueAttribute($name, $value = null)
         {
@@ -11811,7 +11811,7 @@ namespace Collective\Html {
          *
          * @param string $name
          * @return mixed
-         * @static
+         * @static 
          */
         public static function old($name)
         {
@@ -11822,7 +11822,7 @@ namespace Collective\Html {
          * Determine if the old input is empty.
          *
          * @return bool
-         * @static
+         * @static 
          */
         public static function oldInputIsEmpty()
         {
@@ -11833,7 +11833,7 @@ namespace Collective\Html {
          * Get the session store implementation.
          *
          * @return \Illuminate\Contracts\Session\Session $session
-         * @static
+         * @static 
          */
         public static function getSessionStore()
         {
@@ -11845,7 +11845,7 @@ namespace Collective\Html {
          *
          * @param \Illuminate\Contracts\Session\Session $session
          * @return $this
-         * @static
+         * @static 
          */
         public static function setSessionStore($session)
         {
@@ -11858,7 +11858,7 @@ namespace Collective\Html {
          * @param string $name
          * @param callable $macro
          * @return void
-         * @static
+         * @static 
          */
         public static function macro($name, $macro)
         {
@@ -11870,7 +11870,7 @@ namespace Collective\Html {
          *
          * @param string $name
          * @return bool
-         * @static
+         * @static 
          */
         public static function hasMacro($name)
         {
@@ -11882,9 +11882,9 @@ namespace Collective\Html {
          *
          * @param string $method
          * @param array $parameters
-         * @return mixed
+         * @return mixed 
          * @throws \BadMethodCallException
-         * @static
+         * @static 
          */
         public static function macroCall($method, $parameters)
         {
@@ -11898,7 +11898,7 @@ namespace Collective\Html {
          * @param $view
          * @param array $signature
          * @return void
-         * @static
+         * @static 
          */
         public static function component($name, $view, $signature)
         {
@@ -11910,7 +11910,7 @@ namespace Collective\Html {
          *
          * @param $name
          * @return bool
-         * @static
+         * @static 
          */
         public static function hasComponent($name)
         {
@@ -11922,9 +11922,9 @@ namespace Collective\Html {
          *
          * @param string $method
          * @param array $parameters
-         * @return \Illuminate\Contracts\View\View|mixed
+         * @return \Illuminate\Contracts\View\View|mixed 
          * @throws \BadMethodCallException
-         * @static
+         * @static 
          */
         public static function componentCall($method, $parameters)
         {
@@ -11935,13 +11935,13 @@ namespace Collective\Html {
 
     class HtmlFacade
     {
-
+        
         /**
          * Convert an HTML string to entities.
          *
          * @param string $value
          * @return string
-         * @static
+         * @static 
          */
         public static function entities($value)
         {
@@ -11953,7 +11953,7 @@ namespace Collective\Html {
          *
          * @param string $value
          * @return string
-         * @static
+         * @static 
          */
         public static function escapeAll($value)
         {
@@ -11965,7 +11965,7 @@ namespace Collective\Html {
          *
          * @param string $value
          * @return string
-         * @static
+         * @static 
          */
         public static function decode($value)
         {
@@ -11979,7 +11979,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @param bool $secure
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function script($url, $attributes = array(), $secure = null)
         {
@@ -11993,7 +11993,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @param bool $secure
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function style($url, $attributes = array(), $secure = null)
         {
@@ -12008,7 +12008,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @param bool $secure
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function image($url, $alt = null, $attributes = array(), $secure = null)
         {
@@ -12022,7 +12022,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @param bool $secure
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function favicon($url, $attributes = array(), $secure = null)
         {
@@ -12038,7 +12038,7 @@ namespace Collective\Html {
          * @param bool $secure
          * @param bool $escape
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function link($url, $title = null, $attributes = array(), $secure = null, $escape = true)
         {
@@ -12052,7 +12052,7 @@ namespace Collective\Html {
          * @param string $title
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function secureLink($url, $title = null, $attributes = array())
         {
@@ -12067,7 +12067,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @param bool $secure
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function linkAsset($url, $title = null, $attributes = array(), $secure = null)
         {
@@ -12081,7 +12081,7 @@ namespace Collective\Html {
          * @param string $title
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function linkSecureAsset($url, $title = null, $attributes = array())
         {
@@ -12096,7 +12096,7 @@ namespace Collective\Html {
          * @param array $parameters
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function linkRoute($name, $title = null, $parameters = array(), $attributes = array())
         {
@@ -12111,7 +12111,7 @@ namespace Collective\Html {
          * @param array $parameters
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function linkAction($action, $title = null, $parameters = array(), $attributes = array())
         {
@@ -12126,7 +12126,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @param bool $escape
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function mailto($email, $title = null, $attributes = array(), $escape = true)
         {
@@ -12138,7 +12138,7 @@ namespace Collective\Html {
          *
          * @param string $email
          * @return string
-         * @static
+         * @static 
          */
         public static function email($email)
         {
@@ -12150,7 +12150,7 @@ namespace Collective\Html {
          *
          * @param int $num
          * @return string
-         * @static
+         * @static 
          */
         public static function nbsp($num = 1)
         {
@@ -12163,7 +12163,7 @@ namespace Collective\Html {
          * @param array $list
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString|string
-         * @static
+         * @static 
          */
         public static function ol($list, $attributes = array())
         {
@@ -12176,7 +12176,7 @@ namespace Collective\Html {
          * @param array $list
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString|string
-         * @static
+         * @static 
          */
         public static function ul($list, $attributes = array())
         {
@@ -12189,7 +12189,7 @@ namespace Collective\Html {
          * @param array $list
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function dl($list, $attributes = array())
         {
@@ -12201,7 +12201,7 @@ namespace Collective\Html {
          *
          * @param array $attributes
          * @return string
-         * @static
+         * @static 
          */
         public static function attributes($attributes)
         {
@@ -12213,7 +12213,7 @@ namespace Collective\Html {
          *
          * @param string $value
          * @return string
-         * @static
+         * @static 
          */
         public static function obfuscate($value)
         {
@@ -12227,7 +12227,7 @@ namespace Collective\Html {
          * @param string $content
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function meta($name, $content, $attributes = array())
         {
@@ -12241,7 +12241,7 @@ namespace Collective\Html {
          * @param mixed $content
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
-         * @static
+         * @static 
          */
         public static function tag($tag, $content, $attributes = array())
         {
@@ -12254,7 +12254,7 @@ namespace Collective\Html {
          * @param string $name
          * @param callable $macro
          * @return void
-         * @static
+         * @static 
          */
         public static function macro($name, $macro)
         {
@@ -12266,7 +12266,7 @@ namespace Collective\Html {
          *
          * @param string $name
          * @return bool
-         * @static
+         * @static 
          */
         public static function hasMacro($name)
         {
@@ -12278,9 +12278,9 @@ namespace Collective\Html {
          *
          * @param string $method
          * @param array $parameters
-         * @return mixed
+         * @return mixed 
          * @throws \BadMethodCallException
-         * @static
+         * @static 
          */
         public static function macroCall($method, $parameters)
         {
@@ -12294,7 +12294,7 @@ namespace Collective\Html {
          * @param $view
          * @param array $signature
          * @return void
-         * @static
+         * @static 
          */
         public static function component($name, $view, $signature)
         {
@@ -12306,7 +12306,7 @@ namespace Collective\Html {
          *
          * @param $name
          * @return bool
-         * @static
+         * @static 
          */
         public static function hasComponent($name)
         {
@@ -12318,28 +12318,28 @@ namespace Collective\Html {
          *
          * @param string $method
          * @param array $parameters
-         * @return \Illuminate\Contracts\View\View|mixed
+         * @return \Illuminate\Contracts\View\View|mixed 
          * @throws \BadMethodCallException
-         * @static
+         * @static 
          */
         public static function componentCall($method, $parameters)
         {
             return \Collective\Html\HtmlBuilder::componentCall($method, $parameters);
         }
 
-    }
+    }         
 }
 
 namespace Intervention\Image\Facades {
 
     class Image
     {
-
+        
         /**
          * Overrides configuration settings
          *
          * @param array $config
-         * @static
+         * @static 
          */
         public static function configure($config = array())
         {
@@ -12351,7 +12351,7 @@ namespace Intervention\Image\Facades {
          *
          * @param mixed $data
          * @return \Intervention\Image\Image
-         * @static
+         * @static 
          */
         public static function make($data)
         {
@@ -12365,7 +12365,7 @@ namespace Intervention\Image\Facades {
          * @param integer $height
          * @param mixed $background
          * @return \Intervention\Image\Image
-         * @static
+         * @static 
          */
         public static function canvas($width, $height, $background = null)
         {
@@ -12380,14 +12380,14 @@ namespace Intervention\Image\Facades {
          * @param integer $lifetime
          * @param boolean $returnObj
          * @return \Image
-         * @static
+         * @static 
          */
         public static function cache($callback, $lifetime = null, $returnObj = false)
         {
             return \Intervention\Image\ImageManager::cache($callback, $lifetime, $returnObj);
         }
 
-    }
+    }         
 }
 
 namespace App\Helpers {
@@ -12395,31 +12395,33 @@ namespace App\Helpers {
     class GlobalHelper
     {
 
-    }
+    }         
 }
 
 namespace Syscover\ShoppingCart\Facades {
 
     class CartProvider
     {
-
+        
         /**
          * Set the current cart instance
          *
          * @param string $instance Cart instance name
          * @return \Syscover\ShoppingCart\Cart
-         * @static
+         * @static 
          */
         public static function instance($instance = null)
         {
             return \Syscover\ShoppingCart\CartProvider::instance($instance);
         }
 
-    }
+    }         
 }
     
     
 namespace {
+
+    use App\Helpers\GlobalHelper;
 
     class App extends \Illuminate\Support\Facades\App {}
     
@@ -14432,8 +14434,9 @@ namespace {
     {
     }
 
-    class G extends \App\Helpers\GlobalHelper
+    class Glb extends GlobalHelper
     {
+
     }
 
     class CartProvider extends \Syscover\ShoppingCart\Facades\CartProvider

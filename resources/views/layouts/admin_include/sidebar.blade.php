@@ -41,7 +41,7 @@
                 <!-- END RESPONSIVE QUICK SEARCH FORM -->
             </li>
 
-            @foreach(G::urlList() as $group => $routes)
+            @foreach(Glb::urlList() as $group => $routes)
             <li class="nav-item {{ $loop->first?'active':'' }}">
                 <a href="javascript:" class="nav-link nav-toggle">
                     <i class="icon-folder"></i>
@@ -50,7 +50,7 @@
                 </a>
                 <ul class="sub-menu">
                     {{--$collection = collect(['name', 'age']);--}}
-                    @foreach(G::$urlListType as $t => $txt)
+                    @foreach(Glb::$urlListType as $t => $txt)
                     <li class="nav-item {{ $loop->first?'active':'' }} open">
                         <a href="javascript:" class="nav-link nav-toggle">
                             <i class="icon-settings"></i>{{ $txt }}

@@ -5,8 +5,6 @@ use Intervention\Image\Facades\Image;
 
 class GlobalHelper
 {
-
-
     static $urlListType = [
         1 => 'Transaction', 2 => 'Report', 3 => 'Setting'
     ];
@@ -89,6 +87,7 @@ class GlobalHelper
 
         return $src;
     }
+
     // note : m = method , u = url, c = controller@action,
     // t = type (1 = transaction, report = 2, setting = 3)
 

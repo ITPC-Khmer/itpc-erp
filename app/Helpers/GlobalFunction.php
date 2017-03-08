@@ -7,7 +7,7 @@ function nbs($n = 1)
 
 function _t($txt)
 {
-    return G::translate($txt);
+    return Glb::translate($txt);
 }
 
 function get_ses_lang()
