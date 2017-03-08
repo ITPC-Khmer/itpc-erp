@@ -31,5 +31,6 @@ foreach (G::urlList() as $group => $routes) {
 }
 
 
+Auth::routes();
 
-
+Route::get('/home', 'HomeController@index');
