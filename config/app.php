@@ -234,7 +234,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
-        'Glb' => App\Helpers\GlobalHelper::class,
+        'Glb' => App\Helpers\Glb::class,
         'CartProvider' => Syscover\ShoppingCart\Facades\CartProvider::class,
 
 

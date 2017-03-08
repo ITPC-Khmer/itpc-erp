@@ -3,7 +3,7 @@ namespace App\Helpers;
 
 use Intervention\Image\Facades\Image;
 
-class GlobalHelper
+class Glb
 {
     static $urlListType = [
         1 => 'Transaction', 2 => 'Report', 3 => 'Setting'
@@ -25,9 +25,42 @@ class GlobalHelper
         return strtolower($lang);
     }
 
+    static function upload($files, $tmp = false)
+    {
+        $uploads = $tmp == false ? 'uploads/files' : 'uploads/_files';
+
+        $json = array(
+            'files' => array()
+        );
+
+        foreach ($files as $file) {
+
+            $r_filename = $file->getClientOriginalName();//. "." . $file->getClientOriginalExtension();
+
+            $size = $file->getSize();
+            $type = $file->getMimeType();
+
+            $filename = self::resize($file, $tmp);
+
+            $json['files'][] = array(
+                'name' => $r_filename,
+                'b_name' => $filename,
+                'size' => $size,
+                'type' => $type,
+                'url' => asset("{$uploads}/{$filename}"),
+                'deleteType' => 'DELETE',
+                'deleteUrl' => asset("{$uploads}/{$filename}"),
+            );
+            // $upload = $file->move( public_path().'/uploads/files', $filename );
+        }
+
+        return $json;
+
+    }
+
     static function resize($image, $tmp = false)
     {
-        $uploads = $tmp == false ? 'uploads' : '_uploads';
+        $uploads = $tmp == false ? 'uploads/files' : 'uploads/_files';
         try {
             $extension = $image->getClientOriginalExtension();
             $imageRealPath = $image->getRealPath();
