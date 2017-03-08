@@ -11,6 +11,8 @@ foreach (G::urlList() as $group => $routes) {
             {
                 if($route['m'] == 'get'){
                     Route::get($route['u'], $route['c']);
+                    Route::post($route['u'], $route['c']);
+
                 }elseif($route['m'] == 'post'){
                     Route::post($route['u'], $route['c']);
                 }elseif($route['m'] == 'put'){

@@ -15,13 +15,17 @@
     @show
     <meta content="" name="author" />
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    @section('css')
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
         <link href="{{ $base_url }}assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="{{ $base_url }}assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
         <link href="{{ $base_url }}assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="{{ $base_url }}assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+@section('css')
+
+@show
+<!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="{{ $base_url }}assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
         <link href="{{ $base_url }}assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
@@ -31,7 +35,7 @@
         <link href="{{ $base_url }}assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <link href="{{ $base_url }}assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css" />
         <!-- END THEME LAYOUT STYLES -->
-    @show
+
     <link rel="shortcut icon" href="favicon.ico" />
     <script>
         var CSRF_TOKEN = '{{ csrf_token() }}';
@@ -654,9 +658,6 @@
     </div>
     <!-- END FOOTER -->
 </div>
-
-
-@section('js')
 <!--[if lt IE 9]>
 <script src="{{ $base_url }}assets/global/plugins/respond.min.js"></script>
 <script src="{{ $base_url }}assets/global/plugins/excanvas.min.js"></script>
@@ -687,20 +688,25 @@
         }
     });
 </script>
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+@section('js')
+
+@show
+<!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN THEME GLOBAL SCRIPTS -->
 <script src="{{ $base_url }}assets/global/scripts/app.min.js" type="text/javascript"></script>
 <!-- END THEME GLOBAL SCRIPTS -->
+@section('script')
+
+@show
 <!-- BEGIN THEME LAYOUT SCRIPTS -->
 <script src="{{ $base_url }}assets/layouts/layout/scripts/layout.min.js" type="text/javascript"></script>
 <script src="{{ $base_url }}assets/layouts/layout/scripts/demo.min.js" type="text/javascript"></script>
 <script src="{{ $base_url }}assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
 <script src="{{ $base_url }}assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
 <!-- END THEME LAYOUT SCRIPTS -->
-@show
 
-@section('script')
-
-@show
 </body>
 
 </html>

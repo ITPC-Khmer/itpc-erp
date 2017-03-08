@@ -4,7 +4,7 @@
 
 @section('content')
 
-    @component('component.form',['option' => ['url' => 'xx'],'title' => 'Form Test'])
+    @component('component.form',['option' => ['url' => 'sales/inv','id'=>'fileupload'],'title' => 'Form Test'])
 
     <div class="form-body">
         <h3 class="form-section">Person Info</h3>
@@ -38,14 +38,35 @@
             <!--/span-->
         </div>
     </div>
-
     @component('component.form-actions')
-    <button type="submit" class="btn green">Submit</button>
-    <button type="button" class="btn default">Cancel</button>
+    <div class="fileupload-buttonbar">
+                    <span class="btn green fileinput-button">
+                                <i class="fa fa-plus"></i><span> Add files... </span>
+                                <input type="file" name="files[]" multiple="multiple">
+                    </span>
+        <button type="reset" class="btn red cancel">
+            <i class="fa fa-ban-circle"></i>
+            <span> Cancel upload </span>
+        </button>
+        <button type="submit" class="btn blue start">
+            <i class="fa fa-upload"></i>
+            <span> Start upload </span>
+        </button>
+        <!-- The global file processing state -->
+        <span class="fileupload-process"> </span>
+    </div>
     @endcomponent
 
-    @endcomponent
+    {{--use for upload file--}}
+    @include('component.fileupload')
 
+    @endcomponent
 
 @endsection
 
+
+@section('script')
+    {{--use for upload file--}}
+    <script src="{{ $base_url }}assets/pages/scripts/form-fileupload.min.js" type="text/javascript"></script>
+
+@endsection
