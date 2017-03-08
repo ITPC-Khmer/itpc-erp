@@ -53,7 +53,7 @@
                     @foreach(G::$urlListType as $t => $txt)
                     <li class="nav-item {{ $loop->first?'active':'' }} open">
                         <a href="javascript:" class="nav-link nav-toggle">
-                            <i class="icon-settings"></i> {{ $txt }}
+                            <i class="icon-settings"></i>{{ $txt }}
                             <span class="arrow open"></span>
                         </a>
                         <ul class="sub-menu">

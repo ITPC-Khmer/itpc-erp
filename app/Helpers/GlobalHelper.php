@@ -5,6 +5,8 @@ use Intervention\Image\Facades\Image;
 
 class GlobalHelper
 {
+
+
     static $urlListType = [
         1 => 'Transaction', 2 => 'Report', 3 => 'Setting'
     ];
@@ -87,7 +89,6 @@ class GlobalHelper
 
         return $src;
     }
-
     // note : m = method , u = url, c = controller@action,
     // t = type (1 = transaction, report = 2, setting = 3)
 
@@ -95,29 +96,18 @@ class GlobalHelper
     {
         $list = [
             'Sales' => [
-                ['m' => 'get','u' => 'x','c' => '','t' => 1,'txt' => 'xxx'],
-                ['m' => 'get','u' => 'x1','c' => '','t' => 1,'txt' => 'xxx'],
-                ['m' => 'get','u' => 'x2','c' => '','t' => 1,'txt' => 'xxx'],
-                ['m' => 'get','u' => 'x3','c' => '','t' => 2,'txt' => 'xxx'],
-                ['m' => 'get','u' => 'x4','c' => '','t' => 3,'txt' => 'xxx'],
-                ['m' => 'get','u' => 'x5','c' => '','t' => 3,'txt' => 'xxx'],
+                ['m' => 'get', 'u' => 'inv', 'c' => 'Inv@index', 't' => 1, 'txt' => 'Invoice'],
+                ['m' => 'get', 'u' => 'x1', 'c' => 'Inv@index', 't' => 1, 'txt' => 'xxx'],
             ],
-            'Purchases' => [
-                ['m' => 'get','u' => 'x','c' => '','t' => 1,'txt' => 'xxx'],
-                ['m' => 'get','u' => 'x1','c' => '','t' => 1,'txt' => 'xxx'],
-                ['m' => 'get','u' => 'x2','c' => '','t' => 1,'txt' => 'xxx'],
-                ['m' => 'get','u' => 'x3','c' => '','t' => 2,'txt' => 'xxx'],
-                ['m' => 'get','u' => 'x4','c' => '','t' => 3,'txt' => 'xxx'],
-                ['m' => 'get','u' => 'x5','c' => '','t' => 3,'txt' => 'xxx'],
-            ],
-            'Admin' => [
-                ['m' => 'get','u' => 'x','c' => '','t' => 1,'txt' => 'xxx'],
-                ['m' => 'get','u' => 'x1','c' => '','t' => 1,'txt' => 'xxx'],
-                ['m' => 'get','u' => 'x2','c' => '','t' => 1,'txt' => 'xxx'],
-                ['m' => 'get','u' => 'x3','c' => '','t' => 2,'txt' => 'xxx'],
-                ['m' => 'get','u' => 'x4','c' => '','t' => 3,'txt' => 'xxx'],
-                ['m' => 'get','u' => 'x5','c' => '','t' => 3,'txt' => 'xxx'],
-            ],
+            /* 'Purchases' => [
+                 ['m' => 'get','u' => 'x','c' => '','t' => 1,'txt' => 'xxx'],
+                 ['m' => 'get','u' => 'x1','c' => '','t' => 1,'txt' => 'xxx'],
+             ],
+             'Admin' => [
+                 ['m' => 'get','u' => 'x','c' => '','t' => 1,'txt' => 'xxx'],
+                 ['m' => 'get','u' => 'x1','c' => '','t' => 1,'txt' => 'xxx'],
+                 ['m' => 'get','u' => 'x2','c' => '','t' => 1,'txt' => 'xxx'],
+             ],*/
 
         ];
 

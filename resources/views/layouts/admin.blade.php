@@ -65,38 +65,10 @@
                             <span>Page Layouts</span>
                         </li>
                     </ul>
-                    <div class="page-toolbar">
-                        <div class="btn-group pull-right">
-                            <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu pull-right" role="menu">
-                                <li>
-                                    <a href="#">
-                                        <i class="icon-bell"></i> Action</a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="icon-shield"></i> Another action</a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="icon-user"></i> Something else here</a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="icon-bag"></i> Separated link</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
                 <!-- END PAGE BAR -->
                 <!-- BEGIN PAGE TITLE-->
-                <h1 class="page-title"> Ajax Content Page
-                    <small>loading content via ajax</small>
-                </h1>
+
                 <!-- END PAGE TITLE-->
                 <!-- END PAGE HEADER-->
                 <div class="page-content-body">
@@ -671,9 +643,10 @@
     <!-- END CONTAINER -->
     <!-- BEGIN FOOTER -->
     <div class="page-footer">
-        <div class="page-footer-inner"> 2016 &copy; Metronic Theme By
-            <a target="_blank" href="http://keenthemes.com">Keenthemes</a> &nbsp;|&nbsp;
-            <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
+        <div class="page-footer-inner">
+            {{--2016 &copy; Metronic Theme By
+            <a target="_blank" href="">Keenthemes</a> &nbsp;|&nbsp;
+            <a href="" title="" target="_blank">Purchase Metronic!</a>--}}
         </div>
         <div class="scroll-to-top">
             <i class="icon-arrow-up"></i>
