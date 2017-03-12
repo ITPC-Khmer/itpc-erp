@@ -127,9 +127,14 @@ class Glb
     static function urlList()
     {
         $list = [
-            'Sales' => [
-                ['m' => 'get', 'u' => 'inv', 'c' => 'Inv@index', 't' => 1, 'txt' => 'Invoice'],
-                ['m' => 'get', 'u' => 'x1', 'c' => 'Inv@index', 't' => 1, 'txt' => 'xxx'],
+            'Stocks' => [
+//                ItemCategoryController
+                ['m' => 'get', 'u' => 'category', 'c' => 'ItemCategoryController@index', 't' => 3, 'txt' => 'Category'],
+                ['m' => 'get', 'u' => 'category-form', 'c' => 'ItemCategoryController@form', 't' => 1, 'txt' => ''],
+                ['m' => 'get', 'u' => 'category-edit', 'c' => 'ItemCategoryController@edit', 't' => 1, 'txt' => ''],
+                ['m' => 'get', 'u' => 'category-save', 'c' => 'ItemCategoryController@save', 't' => 1, 'txt' => ''],
+                ['m' => 'get', 'u' => 'category-delete', 'c' => 'ItemCategoryController@index', 't' => 1, 'txt' => ''],
+//               End ItemCategoryController
             ],
             /* 'Purchases' => [
                  ['m' => 'get','u' => 'x','c' => '','t' => 1,'txt' => 'xxx'],

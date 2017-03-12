@@ -38,3 +38,15 @@ function active_url($page, $active = 'active')
 
     return '';
 }
+
+function get_title_search($name='',$value='')
+{
+    return '<div class="input-group">
+                <div class="input-icon"><i class="fa fa-question-circle"></i>
+                    <input data-name="'.$name.'" value="'.$value.'" id="'.$name.'" class="head-search-input form-control '.$name.'" type="text" name="'.$name.'" placeholder="'.$name.'"> 
+                </div>
+                <span class="input-group-btn">
+                    <button class="btn btn-success head-search-th" type="button"><i class="fa icon-magnifier"></i></button>
+                </span>
+            </div>';
+}

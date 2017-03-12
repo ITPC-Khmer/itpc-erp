@@ -58,9 +58,9 @@
                         </a>
                         <ul class="sub-menu">
                             @foreach($routes as $route)
-                                @if($route['t'] == $t)
+                                @if($route['t'] == $t && $route['txt'] != '')
                                     <li class="nav-item">
-                                        <a href="{{ strtolower($group) }}/{{ $route['u'] }}" class="ajaxify nav-link">
+                                        <a href="{{ strtolower($group) }}/{{ $route['u'] }}" class="ajaxify_ nav-link">
                                             <i class="icon-camera"></i> {{ $route['txt'] }}</a>
                                     </li>
                                 @endif
