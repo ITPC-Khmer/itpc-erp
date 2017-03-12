@@ -67,6 +67,7 @@
 
 @section('script')
     {{--use for upload file--}}
-    <script src="{{ $base_url }}assets/pages/scripts/form-fileupload.min.js" type="text/javascript"></script>
+
+
 
 @endsection
