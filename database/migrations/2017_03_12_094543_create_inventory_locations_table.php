@@ -23,7 +23,7 @@ class CreateInventoryLocationsTable extends Migration
             $table->string('secondary_phone');
             $table->string('facsimile_num');
             $table->string('email')->nullable();
-            $table->longText('option');
+            $table->longText('options');
             $table->integer('status')->default(1);
             $table->integer('user_id');
             $table->timestamps();

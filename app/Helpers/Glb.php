@@ -131,10 +131,18 @@ class Glb
 //                ItemCategoryController
                 ['m' => 'get', 'u' => 'category', 'c' => 'ItemCategoryController@index', 't' => 3, 'txt' => 'Category'],
                 ['m' => 'get', 'u' => 'category-form', 'c' => 'ItemCategoryController@form', 't' => 1, 'txt' => ''],
-                ['m' => 'get', 'u' => 'category-edit', 'c' => 'ItemCategoryController@edit', 't' => 1, 'txt' => ''],
-                ['m' => 'get', 'u' => 'category-save', 'c' => 'ItemCategoryController@save', 't' => 1, 'txt' => ''],
+                ['m' => 'put', 'u' => 'category-form', 'c' => 'ItemCategoryController@form', 't' => 1, 'txt' => ''],
+                ['m' => 'get', 'u' => 'category-from', 'c' => 'ItemCategoryController@save', 't' => 1, 'txt' => ''],
                 ['m' => 'get', 'u' => 'category-delete', 'c' => 'ItemCategoryController@index', 't' => 1, 'txt' => ''],
 //               End ItemCategoryController
+
+//               MatricesController
+                ['m' => 'get', 'u' => 'matrices', 'c' => 'MatricesController@index', 't' => 3, 'txt' => 'Matrices'],
+                ['m' => 'get', 'u' => 'matrices-form', 'c' => 'MatricesController@form', 't' => 3, 'txt' => ''],
+                ['m' => 'Put', 'u' => 'matrices-form', 'c' => 'MatricesController@form', 't' => 3, 'txt' => ''],
+                ['m' => 'post', 'u' => 'matrices-form', 'c' => 'MatricesController@save', 't' => 3, 'txt' => ''],
+                ['m' => 'delete', 'u' => 'matrices-delete', 'c' => 'MatricesController@delete', 't' => 3, 'txt' => ''],
+//               End MatricesController
             ],
             /* 'Purchases' => [
                  ['m' => 'get','u' => 'x','c' => '','t' => 1,'txt' => 'xxx'],
@@ -151,5 +159,10 @@ class Glb
         return $list;
     }
 
+    static function status(){
+        $data['1']='Enabled';
+        $data['0']='Disable';
+        return $data;
+    }
 
 }

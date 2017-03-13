@@ -13,7 +13,7 @@ class CreateMatricesTable extends Migration
      */
     public function up()
     {
-        Schema::create('matrices', function (Blueprint $table) {
+        Schema::create('st_matrices', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->string('description');
@@ -30,6 +30,6 @@ class CreateMatricesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('matrices');
+        Schema::dropIfExists('st_matrices');
     }
 }

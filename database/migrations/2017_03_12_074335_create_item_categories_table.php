@@ -28,7 +28,7 @@ class CreateItemCategoriesTable extends Migration
             $table->integer('c_o_g_s_account_id')->nullable()->default(0);
             $table->integer('inventory_adjustments_account_id')->nullable()->default(0);
             $table->integer('item_assembly_costs_account_id')->nullable()->default(0);
-            $table->longText('option');
+            $table->longText('options');
             $table->integer('status')->default(1);
             $table->integer('user_id');
             $table->timestamps();

@@ -22,9 +22,7 @@ foreach (Glb::urlList() as $group => $routes) {
                 }else{
                     Route::any($route['u'], $route['c']);
                 }
-
             }
-
 
         }
     );

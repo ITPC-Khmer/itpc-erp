@@ -18,7 +18,7 @@ class CreateUnitMeasuresTable extends Migration
             $table->string('unit_abbreviation');
             $table->string('descriptive_mame');
             $table->integer('decimal_places_id');
-            $table->longText('option');
+            $table->longText('options');
             $table->integer('status')->default(1);
             $table->integer('user_id');
             $table->timestamps();
