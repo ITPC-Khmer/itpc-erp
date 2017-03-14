@@ -141,7 +141,7 @@ class Glb
                 ['m' => 'get', 'u' => 'matrices-form', 'c' => 'MatricesController@form', 't' => 3, 'txt' => ''],
                 ['m' => 'Put', 'u' => 'matrices-form', 'c' => 'MatricesController@form', 't' => 3, 'txt' => ''],
                 ['m' => 'post', 'u' => 'matrices-form', 'c' => 'MatricesController@save', 't' => 3, 'txt' => ''],
-                ['m' => 'delete', 'u' => 'matrices-delete', 'c' => 'MatricesController@delete', 't' => 3, 'txt' => ''],
+                ['m' => 'post', 'u' => 'matrices-delete', 'c' => 'MatricesController@delete', 't' => 3, 'txt' => ''],
 //               End MatricesController
             ],
             /* 'Purchases' => [

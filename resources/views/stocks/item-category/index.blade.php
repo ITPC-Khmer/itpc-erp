@@ -23,7 +23,7 @@
                     <table class="table table-striped table-bordered table-advance table-hover">
                         <thead>
                         <tr>
-                            <th style="width: 160px;">  <a href="{{ url('/cpanel/role-form') }}" class="btn btn-outline btn-circle btn-sm purple">
+                            <th style="width: 160px;">  <a href="{{ url('/stocks/category-form') }}" class="btn btn-outline btn-circle btn-sm purple">
                                     <i class="fa fa-plus"></i> Add </a> </th>
                             <th> {{ _t('title') }}
                                 {!! get_title_search('title','') !!}

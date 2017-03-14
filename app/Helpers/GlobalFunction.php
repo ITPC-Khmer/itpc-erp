@@ -50,3 +50,7 @@ function get_title_search($name='',$value='')
                 </span>
             </div>';
 }
+
+function ajax_delete(){
+
+}

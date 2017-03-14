@@ -14,8 +14,9 @@ class ItemCategoryController extends Controller
         return view('stocks.item-category.index',$data);
     }
 
-    function form(){
-        return 'index2';
+    function form(Request $request){
+        $data[''] = '';
+        return view('stocks.item-category.form');
     }
 
     function save(){
