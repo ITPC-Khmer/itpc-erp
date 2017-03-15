@@ -1,5 +1,4 @@
 @php
-
     $id = isset($result->id)?$result->id:0;
     $parent = isset($result->parent)?$result->parent:0;
     $title = isset($result->parent)?$result->parent:0;

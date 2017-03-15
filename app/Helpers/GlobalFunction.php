@@ -51,6 +51,6 @@ function get_title_search($name='',$value='')
             </div>';
 }
 
-function ajax_delete(){
-
+function status(){
+    return [0=> 'Disable',1=> 'Enabled'];
 }

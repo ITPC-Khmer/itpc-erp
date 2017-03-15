@@ -35,6 +35,7 @@ class MatricesController extends Controller
             'status' => 'required'
         ]);
 
+        $submit_type = $request->submit-0;
         $id = $request->id;
 
         if ($id != 0){
@@ -49,7 +50,8 @@ class MatricesController extends Controller
         $matrices->user_id = 1;
 
         if ($matrices->save()){
-            return redirect('/stocks/matrices');
+            if ($submit_type == 0)return redirect('/stocks/matrices');
+            if ($submit_type == 1)return redirect('/stocks/matrices-form');
         }else{
             return 'aaaa';
         }

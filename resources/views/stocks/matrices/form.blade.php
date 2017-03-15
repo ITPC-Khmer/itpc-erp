@@ -36,7 +36,7 @@ $status = isset($result->status)?$result->status:'1';
             @endcomponent
 
             @component('component.input', ['label' => 'Status','sms' => ''])
-            {!! Form::select('status', Glb::status(), $status,['class'=>"form-control"]) !!}
+            {!! Form::select('status', status(), $status,['class'=>"form-control"]) !!}
             @endcomponent
         </div>
     </div>
@@ -45,7 +45,8 @@ $status = isset($result->status)?$result->status:'1';
             <div class="col-md-offset-2 col-md-10">
                 {{--<button type="button" class="btn default">{{ _t('Back') }}</button>--}}
                 <a class="btn btn-danger" href="javascript:window.history.go(-1);">Back</a>
-                <button type="submit" class="btn blue">{{ _t('Submit') }}</button>
+                <button type="submit" name="submit" value="0" class="btn blue">{{ _t('Save') }}</button>
+                <button type="submit" name="submit" value="1" class="btn blue">{{ _t('Save Next') }}</button>
             </div>
         </div>
     @endcomponent

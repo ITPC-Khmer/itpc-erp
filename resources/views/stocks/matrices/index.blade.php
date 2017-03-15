@@ -32,7 +32,7 @@
                                     {!! get_title_search('description','') !!}
                                 </th>
                                 <th> {{ _t('status') }}
-                                    {!! get_title_search('status','') !!}
+                                    {!! Form::select('status', array_merge([''=>''],status()),null,['class'=>"form-control"]) !!}
                                 </th>
 
                             </tr>
@@ -46,7 +46,7 @@
                                     {!! Form::hidden('id',$row->id) !!}
                                     <button type="submit" class="btn btn-outline btn-circle btn-sm purple">
                                         <i class="fa fa-edit"></i> Edit </button>
-                                    <a data-id="{{ $row->id }}" href="javascript:" class="btn btn-outline btn-circle dark btn-sm black vm-del">
+                                    <a data-href="{{ url('/stocks/matrices-delete') }}" data-id="{{  $row->id }}" href="javascript:" class="btn btn-outline btn-circle dark btn-sm black vm-del">
                                         <i class="fa fa-trash-o"></i> Delete </a>
                                     {!! Form::close() !!}
                                 </td>
@@ -55,7 +55,10 @@
                                     <a href="javascript:"> {!! highlight($row->title,$title) !!} </a>
                                 </td>
                                 <td class="hidden-xs"> {!! highlight($row->description,$description) !!} </td>
-                                <td class="hidden-xs"> {!! highlight($row->status,$status) !!} </td>
+                                {{--<td class="hidden-xs">{{ status()[$row->status] }}</td>--}}
+                                <td class="hidden-xs">
+                                    {!! Form::select('status',status(),$row->status,['class'=>"form-control"]) !!}
+                                </td>
 
                             </tr>
                             @endforeach
@@ -86,78 +89,6 @@
 
 @section('script')
     @parent
-    <script type="text/javascript">
-        var current_url = '{{ url()->current() }}';
 
-        $(function () {
-            $('body').delegate('.vm-del', 'click', function (e) {
-                e.preventDefault();
-                var tr = $(this).parent().parent().parent();
-                var id = $(this).data('id') - 0;
-                swal({
-                        title: "{{ _t('Are you sure?') }}",
-                        text: "{{ _t('You will not be able to recover this data!') }}",
-                        type: "warning",
-                        showCancelButton: true,
-                        confirmButtonColor: "#DD6B55",
-                        confirmButtonText: "Yes, delete it!",
-                        closeOnConfirm: false
-                    },
-                    function () {
-                        $.ajax({
-                            url: '{{ url('/stocks/matrices-delete') }}',
-                            async: false,
-                            data: {id: id},
-                            error: function () {
-                                swal({
-                                    title: "{{ _t('error') }}",
-                                    text: "{{ _t('An error has occurred!') }}",
-                                    type: "warning",
-                                    confirmButtonColor: "#DD6B55",
-                                    confirmButtonText: "Close",
-                                    closeOnConfirm: false
-                                });
-                            },
-                            dataType: 'json',
-                            success: function (data) {
-//                                console.log(data);// affected
-                                if (data.affected - 0 > 0) {
-                                    tr.remove();
-                                    swal("Deleted!", "{{ _t('Your imaginary file has been deleted') }}", "success");
-                                } else {
-                                    swal({
-                                        title: "{{ _t('error') }}",
-                                        text: "{{ _t('An error has occurred!') }}",
-                                        type: "warning",
-                                        confirmButtonColor: "#DD6B55",
-                                        confirmButtonText: "Close",
-                                        closeOnConfirm: false
-                                    });
-                                }
-                            },
-                            type: 'POST'
-                        });
-
-
-                    });
-            });
-
-        });
-
-//
-//        function go_search() {
-//            var url_param = current_url + '?' ;
-//            $('.head-search-th').each(function () {
-//                var input = $(this).parent().parent().find('input');
-//                var n = input.data('name');
-//                var v = input.val();
-//
-//                if($.trim(v) != '')  url_param += '&'+n+'='+encodeURIComponent($.trim(v));
-//
-//            });
-//
-//            location.href = url_param;
-//        }
-    </script>
 @endsection
 

@@ -160,9 +160,7 @@ class Glb
     }
 
     static function status(){
-        $data['1']='Enabled';
-        $data['0']='Disable';
-        return $data;
+        return [0=> 'Disable',1=> 'Enabled'];
     }
 
 }
