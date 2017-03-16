@@ -22,3 +22,179 @@ composer dumpautoload
 
 =============================================
 
+php artisan make:middleware Xxx
+
+ protected $routeMiddleware = [
+
+        'Xxx' => \App\Http\Middleware\Xxx::class,
+    ];
+
+   ==================
+ public function handle($request, Closure $next, $isUser = 1, $isAdmin= 1)
+    {
+        if(!$request->session()->has('mysess.id'))
+        {
+           return redirect('/login-admin');
+        }
+//        echo $request->session()->get('mysess.role_id');
+//        exit();
+            if ($request->session()->get('mysess.role_id') - 0 == 2 && $isAdmin-0 == 1) {
+
+                if ($isUser !=1){
+                    return redirect('/no-permission');
+                }
+                return $next($request);
+            }
+            if ($request->session()->get('mysess.role_id') - 0 == 1 && $isUser-0 == 1 ) {
+                //return redirect('/no-permission');
+                if ($isAdmin ==1){
+                    return redirect('/no-permission');
+                }
+                return $next($request);
+            }
+            return $next($request);
+
+    }
+ ///===================================
+
+ ['prefix' => 'cpanel','namespace' => 'Admin','middleware' => 'MidAdmin:1,0'],
+
+ \\\\\\\\\\\\\\\\\\
+
+ //========= Controllers ===============
+ //=====================================
+ php artisan make:controller Admin/PhotoController
+ php artisan make:model Models/Admin/Photo
+ composer dump-autoload
+ =========================
+ Route::get('admin', 'Admin\AdminController@getHome');
+
+ Route::group(['prefix' => 'admin',
+ 'middleware' => 'auth', 'namespace' => 'Admin'],
+ function() {
+ Route::get('/', 'AdminController@getHome');
+ ….
+ });
+
+
+ =========================
+ Route::get('profile', 'UserController@show')->middleware('auth');
+
+ //========= End Controllers ===============
+ //=====================================
+
+
+ //====== session ==========
+ //=========================
+ 1 run =>   php artisan session:table
+ 2 runn =>  php artisan migrate
+
+ 3. in .env :
+
+ SESSION_DRIVER=database
+
+ //========================================================
+ //Storing Data :
+ // Via a request instance...
+ $request->session()->put('key', 'value');
+
+ // Via the global helper...
+ session(['key' => 'value']);
+
+ $request->session()->flash('status', 'Task was successful!');
+
+ $request->session()->reflash();
+ $request->session()->keep(['username', 'email']);
+ //========================================================
+
+ //Deleting Data
+ $request->session()->forget('key');
+
+ $request->session()->flush();
+ //========================================================
+
+ // Retrieving Data================
+     $value = $request->session()->get('key', 'default');
+
+     // Retrieve a piece of data from the session...
+     $value = session('key');
+
+     // Specifying a default value...
+     $value = session('key', 'default');
+
+ //====== end session ======
+ //=========================
+  $this->validate($request, [
+     'role_id' => 'required',
+     'phone' => 'required',
+     'name' => 'required|max:255',
+     'email' => 'required|email|max:255',
+ ]);
+
+ ================
+ @if (count($errors) > 0)
+     <div class="alert alert-danger">
+         <ul>
+             @foreach ($errors->all() as $error)
+                 <li>{{ $error }}</li>
+             @endforeach
+         </ul>
+     </div>
+ @endif
+
+ public function store(Request $request)
+     {
+         $validator = Validator::make($request->all(), [
+             'title' => 'required|unique:posts|max:255',
+             'body' => 'required',
+         ]);
+
+         if ($validator->fails()) {
+             return redirect('post/create')
+                         ->withErrors($validator)
+                         ->withInput();
+         }
+
+         // Store the blog post...
+     }
+
+
+ //========== Middleware ==============
+ ======================================
+ php artisan make:middleware CheckAge
+
+ =======================
+ if ($request->age <= 200) {
+             return redirect('home');
+         }
+
+         return $next($request);
+ ========================
+ $response = $next($request);
+
+         // Perform action
+
+         return $response;
+ =========================
+
+
+ class UserController extends Controller
+ {
+     /**
+      * Instantiate a new controller instance.
+      *
+      * @return void
+      */
+     public function __construct()
+     {
+         $this->middleware('auth');
+
+         $this->middleware('log')->only('index');
+
+         $this->middleware('subscribed')->except('store');
+     }
+ }
+
+ //==========End Middleware ==============
+ =========================================
+

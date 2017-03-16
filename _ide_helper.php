@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.4.15 on 2017-03-08.
+ * Generated for Laravel 5.4.15 on 2017-03-15.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -3213,7 +3213,7 @@ namespace Illuminate\Support\Facades {
             //Method inherited from \Illuminate\Database\Connection            
             \Illuminate\Database\SqlServerConnection::useDefaultPostProcessor();
         }
-
+        
         /**
          * Get a schema builder instance for the connection.
          *
@@ -3405,7 +3405,7 @@ namespace Illuminate\Support\Facades {
             //Method inherited from \Illuminate\Database\Connection            
             return \Illuminate\Database\SqlServerConnection::pretend($callback);
         }
-
+        
         /**
          * Bind values to their parameters in the given statement.
          *
@@ -8943,7 +8943,7 @@ namespace Illuminate\Support\Facades {
         {
             \Illuminate\Database\Schema\Builder::defaultStringLength($length);
         }
-
+        
         /**
          * Determine if the given table exists.
          *
@@ -8994,7 +8994,7 @@ namespace Illuminate\Support\Facades {
         {
             return \Illuminate\Database\Schema\Builder::getColumnType($table, $column);
         }
-
+        
         /**
          * Get the column listing for a given table.
          *
@@ -11332,11 +11332,10 @@ namespace Illuminate\Support\Facades {
         
     }         
 }
-
+    
 namespace Collective\Html {
 
-    class FormFacade
-    {
+    class FormFacade {
         
         /**
          * Open up a new HTML form.
@@ -11349,7 +11348,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::open($options);
         }
-
+        
         /**
          * Create a new model based form builder.
          *
@@ -11362,7 +11361,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::model($model, $options);
         }
-
+        
         /**
          * Set the model instance on the form builder.
          *
@@ -11374,7 +11373,7 @@ namespace Collective\Html {
         {
             \Collective\Html\FormBuilder::setModel($model);
         }
-
+        
         /**
          * Close the current form.
          *
@@ -11385,7 +11384,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::close();
         }
-
+        
         /**
          * Generate a hidden field with the current CSRF token.
          *
@@ -11396,7 +11395,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::token();
         }
-
+        
         /**
          * Create a form label element.
          *
@@ -11411,7 +11410,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::label($name, $value, $options, $escape_html);
         }
-
+        
         /**
          * Create a form input field.
          *
@@ -11426,7 +11425,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::input($type, $name, $value, $options);
         }
-
+        
         /**
          * Create a text input field.
          *
@@ -11440,7 +11439,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::text($name, $value, $options);
         }
-
+        
         /**
          * Create a password input field.
          *
@@ -11453,7 +11452,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::password($name, $options);
         }
-
+        
         /**
          * Create a hidden input field.
          *
@@ -11467,7 +11466,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::hidden($name, $value, $options);
         }
-
+        
         /**
          * Create an e-mail input field.
          *
@@ -11481,7 +11480,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::email($name, $value, $options);
         }
-
+        
         /**
          * Create a tel input field.
          *
@@ -11495,7 +11494,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::tel($name, $value, $options);
         }
-
+        
         /**
          * Create a number input field.
          *
@@ -11509,7 +11508,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::number($name, $value, $options);
         }
-
+        
         /**
          * Create a date input field.
          *
@@ -11523,7 +11522,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::date($name, $value, $options);
         }
-
+        
         /**
          * Create a datetime input field.
          *
@@ -11537,7 +11536,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::datetime($name, $value, $options);
         }
-
+        
         /**
          * Create a datetime-local input field.
          *
@@ -11551,7 +11550,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::datetimeLocal($name, $value, $options);
         }
-
+        
         /**
          * Create a time input field.
          *
@@ -11565,7 +11564,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::time($name, $value, $options);
         }
-
+        
         /**
          * Create a url input field.
          *
@@ -11579,7 +11578,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::url($name, $value, $options);
         }
-
+        
         /**
          * Create a file input field.
          *
@@ -11592,7 +11591,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::file($name, $options);
         }
-
+        
         /**
          * Create a textarea input field.
          *
@@ -11606,7 +11605,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::textarea($name, $value, $options);
         }
-
+        
         /**
          * Create a select box field.
          *
@@ -11621,7 +11620,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::select($name, $list, $selected, $options);
         }
-
+        
         /**
          * Create a select range field.
          *
@@ -11637,7 +11636,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::selectRange($name, $begin, $end, $selected, $options);
         }
-
+        
         /**
          * Create a select year field.
          *
@@ -11653,7 +11652,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::selectYear();
         }
-
+        
         /**
          * Create a select month field.
          *
@@ -11668,7 +11667,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::selectMonth($name, $selected, $options, $format);
         }
-
+        
         /**
          * Get the select option for the given value.
          *
@@ -11682,7 +11681,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::getSelectOption($display, $value, $selected);
         }
-
+        
         /**
          * Create a checkbox input field.
          *
@@ -11697,7 +11696,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::checkbox($name, $value, $checked, $options);
         }
-
+        
         /**
          * Create a radio button input field.
          *
@@ -11712,7 +11711,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::radio($name, $value, $checked, $options);
         }
-
+        
         /**
          * Create a HTML reset input element.
          *
@@ -11725,7 +11724,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::reset($value, $attributes);
         }
-
+        
         /**
          * Create a HTML image input element.
          *
@@ -11739,7 +11738,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::image($url, $name, $attributes);
         }
-
+        
         /**
          * Create a color input field.
          *
@@ -11753,7 +11752,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::color($name, $value, $options);
         }
-
+        
         /**
          * Create a submit button element.
          *
@@ -11766,7 +11765,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::submit($value, $options);
         }
-
+        
         /**
          * Create a button element.
          *
@@ -11779,7 +11778,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::button($value, $options);
         }
-
+        
         /**
          * Get the ID attribute for a field name.
          *
@@ -11792,7 +11791,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::getIdAttribute($name, $attributes);
         }
-
+        
         /**
          * Get the value that should be assigned to the field.
          *
@@ -11805,7 +11804,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::getValueAttribute($name, $value);
         }
-
+        
         /**
          * Get a value from the session's old input.
          *
@@ -11817,7 +11816,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::old($name);
         }
-
+        
         /**
          * Determine if the old input is empty.
          *
@@ -11828,7 +11827,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::oldInputIsEmpty();
         }
-
+        
         /**
          * Get the session store implementation.
          *
@@ -11839,7 +11838,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::getSessionStore();
         }
-
+        
         /**
          * Set the session store implementation.
          *
@@ -11851,7 +11850,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::setSessionStore($session);
         }
-
+        
         /**
          * Register a custom macro.
          *
@@ -11864,7 +11863,7 @@ namespace Collective\Html {
         {
             \Collective\Html\FormBuilder::macro($name, $macro);
         }
-
+        
         /**
          * Checks if macro is registered.
          *
@@ -11876,7 +11875,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::hasMacro($name);
         }
-
+        
         /**
          * Dynamically handle calls to the class.
          *
@@ -11890,7 +11889,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::macroCall($method, $parameters);
         }
-
+        
         /**
          * Register a custom component.
          *
@@ -11904,7 +11903,7 @@ namespace Collective\Html {
         {
             \Collective\Html\FormBuilder::component($name, $view, $signature);
         }
-
+        
         /**
          * Check if a component is registered.
          *
@@ -11916,7 +11915,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::hasComponent($name);
         }
-
+        
         /**
          * Dynamically handle calls to the class.
          *
@@ -11930,11 +11929,10 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::componentCall($method, $parameters);
         }
+        
+    }         
 
-    }
-
-    class HtmlFacade
-    {
+    class HtmlFacade {
         
         /**
          * Convert an HTML string to entities.
@@ -11947,7 +11945,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::entities($value);
         }
-
+        
         /**
          * Convert all applicable characters to HTML entities.
          *
@@ -11959,7 +11957,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::escapeAll($value);
         }
-
+        
         /**
          * Convert entities to HTML characters.
          *
@@ -11971,7 +11969,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::decode($value);
         }
-
+        
         /**
          * Generate a link to a JavaScript file.
          *
@@ -11985,7 +11983,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::script($url, $attributes, $secure);
         }
-
+        
         /**
          * Generate a link to a CSS file.
          *
@@ -11999,7 +11997,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::style($url, $attributes, $secure);
         }
-
+        
         /**
          * Generate an HTML image element.
          *
@@ -12014,7 +12012,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::image($url, $alt, $attributes, $secure);
         }
-
+        
         /**
          * Generate a link to a Favicon file.
          *
@@ -12028,7 +12026,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::favicon($url, $attributes, $secure);
         }
-
+        
         /**
          * Generate a HTML link.
          *
@@ -12044,7 +12042,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::link($url, $title, $attributes, $secure, $escape);
         }
-
+        
         /**
          * Generate a HTTPS HTML link.
          *
@@ -12058,7 +12056,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::secureLink($url, $title, $attributes);
         }
-
+        
         /**
          * Generate a HTML link to an asset.
          *
@@ -12073,7 +12071,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::linkAsset($url, $title, $attributes, $secure);
         }
-
+        
         /**
          * Generate a HTTPS HTML link to an asset.
          *
@@ -12087,7 +12085,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::linkSecureAsset($url, $title, $attributes);
         }
-
+        
         /**
          * Generate a HTML link to a named route.
          *
@@ -12102,7 +12100,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::linkRoute($name, $title, $parameters, $attributes);
         }
-
+        
         /**
          * Generate a HTML link to a controller action.
          *
@@ -12117,7 +12115,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::linkAction($action, $title, $parameters, $attributes);
         }
-
+        
         /**
          * Generate a HTML link to an email address.
          *
@@ -12132,7 +12130,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::mailto($email, $title, $attributes, $escape);
         }
-
+        
         /**
          * Obfuscate an e-mail address to prevent spam-bots from sniffing it.
          *
@@ -12144,7 +12142,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::email($email);
         }
-
+        
         /**
          * Generates non-breaking space entities based on number supplied.
          *
@@ -12156,7 +12154,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::nbsp($num);
         }
-
+        
         /**
          * Generate an ordered list of items.
          *
@@ -12169,7 +12167,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::ol($list, $attributes);
         }
-
+        
         /**
          * Generate an un-ordered list of items.
          *
@@ -12182,7 +12180,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::ul($list, $attributes);
         }
-
+        
         /**
          * Generate a description list of items.
          *
@@ -12195,7 +12193,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::dl($list, $attributes);
         }
-
+        
         /**
          * Build an HTML attribute string from an array.
          *
@@ -12207,7 +12205,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::attributes($attributes);
         }
-
+        
         /**
          * Obfuscate a string to prevent spam-bots from sniffing it.
          *
@@ -12219,7 +12217,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::obfuscate($value);
         }
-
+        
         /**
          * Generate a meta tag.
          *
@@ -12233,7 +12231,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::meta($name, $content, $attributes);
         }
-
+        
         /**
          * Generate an html tag.
          *
@@ -12247,7 +12245,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::tag($tag, $content, $attributes);
         }
-
+        
         /**
          * Register a custom macro.
          *
@@ -12260,7 +12258,7 @@ namespace Collective\Html {
         {
             \Collective\Html\HtmlBuilder::macro($name, $macro);
         }
-
+        
         /**
          * Checks if macro is registered.
          *
@@ -12272,7 +12270,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::hasMacro($name);
         }
-
+        
         /**
          * Dynamically handle calls to the class.
          *
@@ -12286,7 +12284,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::macroCall($method, $parameters);
         }
-
+        
         /**
          * Register a custom component.
          *
@@ -12300,7 +12298,7 @@ namespace Collective\Html {
         {
             \Collective\Html\HtmlBuilder::component($name, $view, $signature);
         }
-
+        
         /**
          * Check if a component is registered.
          *
@@ -12312,7 +12310,7 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::hasComponent($name);
         }
-
+        
         /**
          * Dynamically handle calls to the class.
          *
@@ -12326,14 +12324,13 @@ namespace Collective\Html {
         {
             return \Collective\Html\HtmlBuilder::componentCall($method, $parameters);
         }
-
+        
     }         
 }
-
+    
 namespace Intervention\Image\Facades {
 
-    class Image
-    {
+    class Image {
         
         /**
          * Overrides configuration settings
@@ -12345,7 +12342,7 @@ namespace Intervention\Image\Facades {
         {
             return \Intervention\Image\ImageManager::configure($config);
         }
-
+        
         /**
          * Initiates an Image instance from different input types
          *
@@ -12357,7 +12354,7 @@ namespace Intervention\Image\Facades {
         {
             return \Intervention\Image\ImageManager::make($data);
         }
-
+        
         /**
          * Creates an empty image canvas
          *
@@ -12371,7 +12368,7 @@ namespace Intervention\Image\Facades {
         {
             return \Intervention\Image\ImageManager::canvas($width, $height, $background);
         }
-
+        
         /**
          * Create new cached image and run callback
          * (requires additional package intervention/imagecache)
@@ -12386,22 +12383,20 @@ namespace Intervention\Image\Facades {
         {
             return \Intervention\Image\ImageManager::cache($callback, $lifetime, $returnObj);
         }
-
-    }         
-}
-
-namespace App\Helpers {
-
-    class Glb
-    {
         
     }         
 }
+    
+namespace App\Helpers {
 
+    class Glb {
+        
+    }         
+}
+    
 namespace Syscover\ShoppingCart\Facades {
 
-    class CartProvider
-    {
+    class CartProvider {
         
         /**
          * Set the current cart instance
@@ -12414,7 +12409,7 @@ namespace Syscover\ShoppingCart\Facades {
         {
             return \Syscover\ShoppingCart\CartProvider::instance($instance);
         }
-
+        
     }         
 }
     
@@ -14419,26 +14414,16 @@ namespace {
             return \Illuminate\Database\Query\Builder::macroCall($method, $parameters);
         }
         }
-
-    class Form extends \Collective\Html\FormFacade
-    {
-    }
-
-    class Html extends \Collective\Html\HtmlFacade
-    {
-    }
-
-    class Image extends \Intervention\Image\Facades\Image
-    {
-    }
-
-    class Glb extends \App\Helpers\Glb
-    {
-    }
-
-    class CartProvider extends \Syscover\ShoppingCart\Facades\CartProvider
-    {
-    }
+    
+    class Form extends \Collective\Html\FormFacade {}
+    
+    class Html extends \Collective\Html\HtmlFacade {}
+    
+    class Image extends \Intervention\Image\Facades\Image {}
+    
+    class Glb extends \App\Helpers\Glb {}
+    
+    class CartProvider extends \Syscover\ShoppingCart\Facades\CartProvider {}
     
 }
 
@@ -14463,7 +14448,5 @@ namespace Illuminate\Support {
      * @method Fluent unsigned() Add the unsigned modifier
      * @method Fluent useCurrent() Add the default timestamp value
      */
-    class Fluent
-    {
-    }
+    class Fluent {}
 }
