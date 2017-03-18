@@ -15,17 +15,21 @@ class CreateInventoryLocationsTable extends Migration
     {
         Schema::create('st_inventory_locations', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('code');
-            $table->string('name');
-            $table->string('contact_deliveries');
-            $table->string('address');
-            $table->string('phone');
-            $table->string('secondary_phone');
-            $table->string('facsimile_num');
-            $table->string('email')->nullable();
-            $table->longText('options');
-            $table->integer('status')->default(1);
-            $table->integer('user_id');
+            $table->string('code')->index()->nullable();
+            $table->string('location_name')->index()->nullable();
+            $table->text('contact')->nullable();//json
+            $table->text('address')->nullable();
+
+            /*[
+             name : xxxx,
+             contact_deliveries : xxx,
+             phone : xxx,
+             email: xx
+            ];*/
+
+            $table->text('options')->nullable();//json
+            $table->integer('status')->index()->nullable()->default(1);
+            $table->integer('user_id')->index()->nullable();
             $table->timestamps();
 
         });

@@ -15,10 +15,11 @@ class CreateMatricesTable extends Migration
     {
         Schema::create('st_matrices', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('description');
-            $table->integer('status')->default(1);
-            $table->integer('user_id');
+            $table->string('title')->index()->nullable();
+            $table->string('description')->index()->nullable();
+            $table->text('option')->nullable()->comment('Input Value of title');
+            $table->integer('status')->index()->default(1);
+            $table->integer('user_id')->index()->nullable();
             $table->timestamps();
         });
     }

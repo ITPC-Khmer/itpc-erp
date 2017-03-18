@@ -15,24 +15,33 @@ class CreateItemsTable extends Migration
     {
         Schema::create('st_items', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('code');
-            $table->string('bar_code')->nullable();
-            $table->string('qr_code')->nullable();
-            $table->string('manufacturer_code')->nullable();
-            $table->string('description')->nullable();
-            $table->integer('item_category_id');
-            $table->integer('item_tax_type_id')->nullable();
-            $table->integer('exclude_sales')->nullable();
-            $table->integer('exclude_purchases')->nullable();
-            $table->integer('sales_account_id')->nullable()->default(0);
-            $table->integer('inventory_account_id')->nullable()->default(0);
-            $table->integer('c_o_g_s_account_id')->nullable()->default(0);
-            $table->integer('inventory_adjustments_account_id')->nullable()->default(0);
-            $table->integer('item_assembly_costs_account_id')->nullable()->default(0);
-            $table->longText('image');
-            $table->longText('options');
+
+            $table->string('matrices_id')->index()->nullable();//json
+            $table->integer('matrices')->index()->nullable();
+            $table->string('matrices_unit')->index()->nullable();
+
+            $table->string('code')->index()->nullable();
+            $table->string('bar_code')->index()->nullable();
+            $table->string('qr_code')->index()->nullable();
+            $table->string('manufacturer_code')->index()->nullable();
+
+            $table->string('title')->index()->nullable();
+            $table->string('description')->index()->nullable();
+
+            $table->integer('item_category_id')->index()->nullable();
+            $table->integer('item_tax_type_id')->index()->nullable();
+            $table->integer('exclude_sales')->index()->nullable();
+            $table->integer('exclude_purchases')->index()->nullable();
+            $table->integer('sales_account_id')->index()->nullable()->default(0);
+            $table->integer('inventory_account_id')->index()->nullable()->default(0);
+            $table->integer('c_o_g_s_account_id')->index()->nullable()->default(0);
+            $table->integer('inventory_adjustments_account_id')->index()->nullable()->default(0);
+            $table->integer('item_assembly_costs_account_id')->index()->nullable()->default(0);
+
+            $table->longText('image_url')->nullable();
+            $table->text('options')->nullable();//json
             $table->integer('status')->default(1);
-            $table->integer('user_id');
+            $table->integer('user_id')->index()->nullable();
             $table->timestamps();
         });
     }

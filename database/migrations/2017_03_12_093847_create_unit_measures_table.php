@@ -13,14 +13,13 @@ class CreateUnitMeasuresTable extends Migration
      */
     public function up()
     {
-        Schema::create('unit_measures', function (Blueprint $table) {
+        Schema::create('st_unit_measures', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('unit_abbreviation');
-            $table->string('descriptive_mame');
-            $table->integer('decimal_places_id');
-            $table->longText('options');
+            $table->string('title')->index()->nullable();
+            $table->decimal('decimal_places')->index()->nullable();
+            $table->longText('options');//json
             $table->integer('status')->default(1);
-            $table->integer('user_id');
+            $table->integer('user_id')->index()->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ class CreateUnitMeasuresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('unit_measures');
+        Schema::dropIfExists('st_unit_measures');
     }
 }
