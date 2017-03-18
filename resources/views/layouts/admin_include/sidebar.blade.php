@@ -60,7 +60,7 @@
                             @foreach($routes as $route)
                                 @if($route['t'] == $t && $route['txt'] != '')
                                     <li class="nav-item">
-                                        <a href="{{ strtolower($group) }}/{{ $route['u'] }}" class="ajaxify_ nav-link">
+                                        <a href="{{ url(strtolower($group)."/".$route['u']) }}" class="ajaxify_ nav-link">
                                             <i class="icon-camera"></i> {{ $route['txt'] }}</a>
                                     </li>
                                 @endif

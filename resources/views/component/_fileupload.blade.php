@@ -46,7 +46,6 @@
                             <tr class="template-download fade">
                                 <td>
                                     <span class="preview"> {% if (file.thumbnailUrl) { %}
-                                        <input type="hidden" name="image_url[]" value="{%=file.b_name%}">
                                         <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery>
                                             <img src="{%=file.thumbnailUrl%}">
                                         </a> {% } %} </span>
@@ -61,11 +60,11 @@
                                     <span class="size">{%=o.formatFileSize(file.size)%}</span>
                                 </td>
                                 <td> {% if (file.deleteUrl) { %}
-                                    <button class="btn red delete btn-sm delete-upload-img" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}" {% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}' {% } %}>
+                                    <button class="btn red delete btn-sm" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}" {% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}' {% } %}>
                                         <i class="fa fa-trash-o"></i>
                                         <span>Delete</span>
                                     </button>
-                                    {% } else { %}
+                                    <input type="checkbox" name="delete" value="1" class="toggle"> {% } else { %}
                                     <button class="btn yellow cancel btn-sm">
                                         <i class="fa fa-ban"></i>
                                         <span>Cancel</span>

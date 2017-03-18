@@ -59,6 +59,7 @@
 
                 <!-- BEGIN PAGE HEADER-->
                 <!-- BEGIN PAGE BAR -->
+                @section('breadcrumb')
                 <div class="page-bar">
                     <ul class="page-breadcrumb">
                         <li>
@@ -70,6 +71,7 @@
                         </li>
                     </ul>
                 </div>
+                @show
                 <!-- END PAGE BAR -->
                 <!-- BEGIN PAGE TITLE-->
 
@@ -706,6 +708,16 @@
 <script src="{{ $base_url }}assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
 <script src="{{ $base_url }}assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
 <!-- END THEME LAYOUT SCRIPTS -->
+
+<script type="text/javascript">
+    $(function () {
+
+        $('body').delegate('.delete-upload-img','click',function () {
+            $(this).parent().parent().remove();
+        });
+
+    });
+</script>
 
 </body>
 

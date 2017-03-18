@@ -183,6 +183,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Syscover\ShoppingCart\ShoppingCartServiceProvider::class,
 
+
     ],
 
     /*
@@ -236,8 +237,6 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'Glb' => App\Helpers\Glb::class,
         'CartProvider' => Syscover\ShoppingCart\Facades\CartProvider::class,
-
-
     ],
 
 ];

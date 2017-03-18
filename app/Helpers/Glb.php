@@ -1,14 +1,11 @@
 <?php
 namespace App\Helpers;
 
+use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
 
 class Glb
 {
-    static $urlListType = [
-        1 => 'Transaction', 2 => 'Report', 3 => 'Setting'
-    ];
-
     static function translate($txt)
     {
         $lang = strtolower($txt);
@@ -25,6 +22,22 @@ class Glb
         return strtolower($lang);
     }
 
+    static function deleteFile($img,$tmp = false)
+    {
+        $uploads = $tmp == false ? 'uploads/files' : 'uploads/_files';
+        if(File::exists("$uploads/$img")) File::delete("$uploads/$img");
+        if(File::exists("$uploads/tmp1/$img")) File::delete("$uploads/tmp1/$img");
+        if(File::exists("$uploads/tmp2/$img")) File::delete("$uploads/tmp2/$img");
+    }
+
+    static function moveTmpFile($img,$tmp = false)
+    {
+        $uploadsTmp = 'uploads/_files'; $uploads = 'uploads/files';
+        if(File::exists("$uploadsTmp/$img")) File::move("$uploadsTmp/$img","$uploads/$img");
+        if(File::exists("$uploadsTmp/tmp1/$img")) File::move("$uploadsTmp/tmp1/$img","$uploads/tmp1/$img");
+        if(File::exists("$uploadsTmp/tmp2/$img")) File::move("$uploadsTmp/tmp2/$img","$uploads/tmp2/$img");
+    }
+
     static function upload($files, $tmp = false)
     {
         $uploads = $tmp == false ? 'uploads/files' : 'uploads/_files';
@@ -34,33 +47,29 @@ class Glb
         );
 
         foreach ($files as $file) {
-
             $r_filename = $file->getClientOriginalName();//. "." . $file->getClientOriginalExtension();
-
             $size = $file->getSize();
             $type = $file->getMimeType();
-
             $filename = self::resize($file, $tmp);
-
             $json['files'][] = array(
                 'name' => $r_filename,
                 'b_name' => $filename,
                 'size' => $size,
                 'type' => $type,
                 'url' => asset("{$uploads}/{$filename}"),
+                'thumbnailUrl' => asset("{$uploads}/tmp2/{$filename}"),
                 'deleteType' => 'DELETE',
-                'deleteUrl' => asset("{$uploads}/{$filename}"),
+                'deleteUrl' => url("sales/delete/{$filename}"),
             );
             // $upload = $file->move( public_path().'/uploads/files', $filename );
         }
-
         return $json;
-
     }
 
     static function resize($image, $tmp = false)
     {
         $uploads = $tmp == false ? 'uploads/files' : 'uploads/_files';
+
         try {
             $extension = $image->getClientOriginalExtension();
             $imageRealPath = $image->getRealPath();
@@ -121,6 +130,12 @@ class Glb
         return $src;
     }
 
+    //===============================================
+    //===============================================
+
+    static $urlListType = [
+        1 => 'Transaction', 2 => 'Report', 3 => 'Setting'
+    ];
     // note : m = method , u = url, c = controller@action,
     // t = type (1 = transaction, report = 2, setting = 3)
 
@@ -158,7 +173,8 @@ class Glb
 
         return $list;
     }
-
+    //===============================================
+    //===============================================
     static function status(){
         return [0=> 'Disable',1=> 'Enabled'];
     }

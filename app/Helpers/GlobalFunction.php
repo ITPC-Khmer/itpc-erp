@@ -1,5 +1,6 @@
 <?php
 
+
 function nbs($n = 1)
 {
     return str_repeat('&nbsp;', $n);
@@ -7,6 +8,7 @@ function nbs($n = 1)
 
 function _t($txt)
 {
+
     return Glb::translate($txt);
 }
 

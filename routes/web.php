@@ -3,6 +3,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::any('sales/inv','Sales\Inv@index');
+Route::delete('sales/delete/{img}','Sales\Inv@delete');
+
+
+
 foreach (Glb::urlList() as $group => $routes) {
     Route::group(['prefix' => strtolower($group),'namespace' => $group],
         function() use ($routes) {
