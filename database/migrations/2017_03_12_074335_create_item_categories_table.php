@@ -28,8 +28,8 @@ class CreateItemCategoriesTable extends Migration
             $table->integer('c_o_g_s_account_id')->index()->nullable()->default(0);
             $table->integer('inventory_adjustments_account_id')->index()->nullable()->default(0);
             $table->integer('item_assembly_costs_account_id')->index()->nullable()->default(0);
-            $table->text('image_url')->index()->nullable();//json
-            $table->longText('options')->index()->nullable();//json
+            $table->text('image_url')->nullable();//json
+            $table->longText('options')->nullable();//json
             $table->integer('status')->index()->nullable()->default(1);
             $table->integer('user_id')->index()->nullable();
             $table->timestamps();

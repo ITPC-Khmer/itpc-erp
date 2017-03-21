@@ -27,17 +27,39 @@ $status = isset($result->status)?$result->status:'1';
     <div class="form-body">
         <h3 class="form-section">Person Info</h3>
         <div class="row">
-            @component('component.input', ['label' => 'Title','sms' => ''])
+
+            @component('component.input', ['label' => _t('Title'),'sms' => ''])
             {!! Form::text('title',$title,['class'=>"form-control", 'placeholder'=>"Title here.."]) !!}
             @endcomponent
 
-            @component('component.input', ['label' => 'Description','sms' => ''])
-            {!! Form::textarea('description',$description,['class'=>"form-control", 'placeholder'=>"Description here..."]) !!}
+            @component('component.input', ['label' => _t('Description'),'sms' => ''])
+            {!! Form::text('description',$description,['class'=>"form-control", 'placeholder'=>"Description here..."]) !!}
             @endcomponent
 
-            @component('component.input', ['label' => 'Status','sms' => ''])
+            <div class="form-group form-md-line-input option">
+                <label class="col-md-3 control-label">{{_t('Matrices Detail')}}</label>
+                <div class="col-md-9">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-btn btn-left">
+                            {{--<button class="btn red-intense" type="button">Delete</button>--}}
+                        </span>
+                        <div class="input-group-control">
+                            <input type="text" class="form-control input-sm" placeholder="">
+                            <span class="help-block"></span>
+                            <div class="form-control-focus"> </div>
+                        </div>
+                        <span class="input-group-btn btn-right">
+                            <button class="btn green-haze add-new" type="button">{{_t('Add')}}</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+
+            @component('component.input', ['label' => _t('Status'),'sms' => ''])
             {!! Form::select('status', status(), $status,['class'=>"form-control"]) !!}
             @endcomponent
+
         </div>
     </div>
     @component('component.form-actions')
@@ -56,5 +78,39 @@ $status = isset($result->status)?$result->status:'1';
 
 @section('script')
     @parent
+    <script type="text/javascript">
+        $(function () {
+            var html = '<div>' +
+                            '<label class="col-md-3 control-label"></label>' +
+                            '<div class="col-md-9">' +
+                                '<div class="input-group input-group-sm">' +
+                                    '<span class="input-group-btn btn-left">' +
+                                        '<button class="btn red-intense del" type="button">{{_t('Delete')}}</button>' +
+                                    '</span>' +
+                                    '<div class="input-group-control">' +
+                                        '<input type="text" class="form-control input-sm" placeholder="">' +
+                                        '<span class="help-block"></span>' +
+                                        '<div class="form-control-focus"> </div>' +
+                                    '</div>' +
+                                    '<span class="input-group-btn btn-right">' +
+                                        '<button class="btn green-haze add-new" type="button">{{_t('Add')}}</button>' +
+                                    '</span>' +
+                                '</div>' +
+                            '</div>'+
+                        '</div>';
+
+
+            $('body').delegate('.add-new','click',function (e) {
+                e.preventDefault();
+                $('.option').append(html);
+            });
+
+            $('body').delegate('.del','click',function (e) {
+                e.preventDefault();
+                $(this).parent().parent().parent().parent().remove();
+
+            });
+        });
+    </script>
 
 @endsection
